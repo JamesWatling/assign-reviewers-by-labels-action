@@ -1,4 +1,4 @@
-name: 'Assign reviewers by labels'
+name: 'Assign reviewers by labels (case insensitive)'
 description: 'Use labels to automatically assign reviewers to PRs'
 branding:
   icon: 'tag'  
@@ -37,5 +37,5 @@ outputs:
   unassigned_url:
     description: 'The PR url'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
