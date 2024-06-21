@@ -1,5 +1,5 @@
 {
-  "name": "assign-reviewers-by-labels-action",
+  "name": "assign-reviewers-by-labels-action-case-insensitive",
   "version": "1.2.0",
   "private": false,
   "description": "Automatically assign reviewers to a PR using labels",
