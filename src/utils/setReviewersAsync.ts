@@ -51,7 +51,13 @@ export async function setReviewersAsync(
 
   const prOwner = pullRequest.user.login.toLowerCase()
 
-  const reviewers = options.reviewers.filter(reviewer => reviewer.toLowerCase() !== prOwner)
+  console.log('PR Owner:', prOwner)
+
+  const reviewers = options.reviewers.filter(
+    reviewer => reviewer.toLowerCase() !== prOwner
+  )
+
+  console.log('Reviewers:', reviewers)
 
   if (reviewers.length === 0) {
     return null
