@@ -49,9 +49,9 @@ export async function setReviewersAsync(
   const pullNumber = pullRequest.number
   const repo = repository.name
 
-  const prOwner = pullRequest.user.login
+  const prOwner = pullRequest.user.login.toLowerCase()
 
-  const reviewers = options.reviewers.filter(reviewer => reviewer !== prOwner)
+  const reviewers = options.reviewers.filter(reviewer => reviewer.toLowerCase() !== prOwner)
 
   if (reviewers.length === 0) {
     return null
